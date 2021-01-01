@@ -1,42 +1,122 @@
-#include <stdio.h>
-
-#define DIM 15
-
-//Find and print-out the longest ascending sub-sequence on integer values within the array.
-int main() {
-
-    int v[DIM],length,minPos,maxLength;
-
-    printf("Enter ");
-
-    for (int i = 0; i < DIM; i++) {
-        printf("v[%d]: ",i);
-        scanf("%d",&v[i]);
-    }
-
-    maxLength = 1;
-    minPos = length = 0;
-
-    for (int i = 0; i < DIM; i++) {
-        if (i<DIM-1 && v[i] < v[i+1]) {
-            length++;
-        } else
-        {
-            if (length > maxLength){
-                maxLength = length + 1;
-                minPos = i - length;
-            }
-
-            length = 0;
-        }
-    }
-
-    printf("Longest order is: ");
-
-    for (int i = minPos; i < minPos+maxLength; i++) {
-        printf("%d ",v[i]);
-    }
-    printf("\n");
-
-    return 0;
-}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1561.61">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 12.0px 'Songti SC'; font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!-- #######<span class="Apple-converted-space">  </span>YAY, I AM THE SOURCE EDITOR! #########--&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h1 style="color: #5e9ca0; text-align: left;"&gt;1111111a&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h2 style="color: #2e6c80;"&gt;How to use the editor:&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Paste your documents in the visual editor on the left or your HTML code in the source editor in the right. &lt;br /&gt;Edit any of the two areas and see the other changing in real time.&amp;nbsp;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Click the &lt;span style="background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 5px;"&gt;Clean&lt;/span&gt; button to clean your source code.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h2 style="color: #2e6c80;"&gt;Some useful features:&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&lt;ol style="list-style: none; font-size: 14px; line-height: 32px; font-weight: bold;"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;li style="clear: both;"&gt;&lt;img style="float: left;" src="https://html-online.com/img/01-interactive-connection.png" alt="interactive connection" width="45" /&gt; Interactive source editor&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">&lt;li style="clear: both;"&gt;&lt;img style="float: left;" src="https://html-online.com/img/02-html-clean.png" alt="html cleaner" width="45" /&gt; HTML Cleaning&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">&lt;li style="clear: both;"&gt;&lt;img style="float: left;" src="https://html-online.com/img/03-docs-to-html.png" alt="Word to html" width="45" /&gt; Word to HTML conversion&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">&lt;li style="clear: both;"&gt;&lt;img style="float: left;" src="https://html-online.com/img/04-replace.png" alt="replace text" width="45" /&gt; Find and Replace&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">&lt;li style="clear: both;"&gt;&lt;img style="float: left;" src="https://html-online.com/img/05-gibberish.png" alt="gibberish" width="45" /&gt; Lorem-Ipsum generator&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">&lt;li style="clear: both;"&gt;&lt;img style="float: left;" src="https://html-online.com/img/6-table-div-html.png" alt="html table div" width="45" /&gt; Table to DIV conversion&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/ol&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h2 style="color: #2e6c80;"&gt;Cleaning options:&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&lt;table class="editorDemoTable"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;thead&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Name of the feature&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Example&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Default&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/thead&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tbody&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Remove tag attributes&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&lt;img style="margin: 1px 15px;" src="images/smiley.png" alt="laughing" width="40" height="16" /&gt; (except &lt;strong&gt;img&lt;/strong&gt;-&lt;em&gt;src&lt;/em&gt; and &lt;strong&gt;a&lt;/strong&gt;-&lt;em&gt;href&lt;/em&gt;)&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&amp;nbsp;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Remove inline styles&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&lt;span style="color: green; font-size: 13px;"&gt;You &lt;strong style="color: blue; text-decoration: underline;"&gt;should never&lt;/strong&gt;&amp;nbsp;use inline styles!&lt;/span&gt;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&lt;strong style="font-size: 17px; color: #2b2301;"&gt;x&lt;/strong&gt;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Remove classes and IDs&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&lt;span id="demoId"&gt;Use classes to &lt;strong class="demoClass"&gt;style everything&lt;/strong&gt;.&lt;/span&gt;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&lt;strong style="font-size: 17px; color: #2b2301;"&gt;x&lt;/strong&gt;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Remove all tags&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;This leaves &lt;strong style="color: blue;"&gt;only the plain&lt;/strong&gt; &lt;em&gt;text&lt;/em&gt;. &lt;img style="margin: 1px;" src="images/smiley.png" alt="laughing" width="16" height="16" /&gt;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&amp;nbsp;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Remove successive &amp;amp;nbsp;s&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Never use non-breaking spaces&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;to set margins.&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&lt;strong style="font-size: 17px; color: #2b2301;"&gt;x&lt;/strong&gt;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Remove empty tags&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Empty tags should go!&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&amp;nbsp;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Remove tags with one &amp;amp;nbsp;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;This makes&amp;nbsp;no sense!&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&lt;strong style="font-size: 17px; color: #2b2301;"&gt;x&lt;/strong&gt;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Remove span tags&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Span tags with &lt;span style="color: green; font-size: 13px;"&gt;all styles&lt;/span&gt;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&lt;strong style="font-size: 17px; color: #2b2301;"&gt;x&lt;/strong&gt;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Remove images&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;I am an image: &lt;img src="images/smiley.png" alt="laughing" /&gt;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&amp;nbsp;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Remove links&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&lt;a href="https://html-online.com"&gt;This is&lt;/a&gt; a link.&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&amp;nbsp;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Remove tables&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Takes everything out of the table.&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&amp;nbsp;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Replace table tags with structured divs&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;This text is inside a table.&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&amp;nbsp;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Remove comments&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;This is only visible in the source editor &lt;!-- HELLO! --&gt;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&lt;strong style="font-size: 17px; color: #2b2301;"&gt;x&lt;/strong&gt;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Encode special characters&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&lt;span style="color: red; font-size: 17px;"&gt;&amp;hearts;&lt;/span&gt; &lt;strong style="font-size: 20px;"&gt;</span><span class="s2">☺</span><span class="s1"> </span><span class="s2">★</span><span class="s1">&lt;/strong&gt; &amp;gt;&amp;lt;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&lt;strong style="font-size: 17px; color: #2b2301;"&gt;x&lt;/strong&gt;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Set new lines and text indents&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;Organize the tags in a nice tree view.&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;td&gt;&amp;nbsp;&lt;/td&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/tbody&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/table&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;&lt;strong&gt;Save this link into your bookmarks and share it with your friends. It is all FREE! &lt;/strong&gt;&lt;br /&gt;&lt;strong&gt;Enjoy!&lt;/strong&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;</span></p>
+</body>
+</html>
