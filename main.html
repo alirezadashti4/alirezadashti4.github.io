@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+#define DIM 15
+
+//Find and print-out the longest ascending sub-sequence on integer values within the array.
+int main() {
+
+    int v[DIM],length,minPos,maxLength;
+
+    printf("Enter ");
+
+    for (int i = 0; i < DIM; i++) {
+        printf("v[%d]: ",i);
+        scanf("%d",&v[i]);
+    }
+
+    maxLength = 1;
+    minPos = length = 0;
+
+    for (int i = 0; i < DIM; i++) {
+        if (i<DIM-1 && v[i] < v[i+1]) {
+            length++;
+        } else
+        {
+            if (length > maxLength){
+                maxLength = length + 1;
+                minPos = i - length;
+            }
+
+            length = 0;
+        }
+    }
+
+    printf("Longest order is: ");
+
+    for (int i = minPos; i < minPos+maxLength; i++) {
+        printf("%d ",v[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
